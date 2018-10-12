@@ -1,0 +1,31 @@
+/*
+Theme name: Popper Child Theme
+Theme URI: http://Lynda.com/mor10
+Description: A child theme of Morten's awesome Popper theme.
+Author: Winston Sieck
+Author URI: http://www.globalcognition.org;
+Template: popper
+Version: 0.1.0
+*/
+
+@import url("../popper/style.css");
+
+body {
+	
+}
+
+.site-title {
+	font-weight: 300;
+}
+
+.site-description {
+	font-style: italic;
+}
+
+
+@media screen and (min-width: 30em) {
+	.entry-meta {
+		margin: 0 -1.894736842105263em;
+		background-color: pink;
+	}
+}

@@ -13,7 +13,7 @@ function jsforwp_enqueue_scripts() {
   // Change 'https://cdn.com/for/vue.js' to 'https://unpkg.com/vue@2.4.1'
   wp_enqueue_script(
     'jsforwp-vue-js',
-    'https://cdn.com/for/vue.js',
+    'https://unpkg.com/vue@2.4.1',
     [],
     time(),
     true
@@ -23,7 +23,7 @@ function jsforwp_enqueue_scripts() {
   wp_enqueue_script(
     'jsforwp-vue-theme-js',
     get_stylesheet_directory_uri() . '/assets/js/vue.theme.js',
-    [ 'dependency-handle-here' ],
+    [ 'jsforwp-vue-js' ],
     time(),
     true
   );
@@ -36,7 +36,7 @@ add_action( 'wp_enqueue_scripts', 'jsforwp_enqueue_scripts' );
 function jsforwp_remove_ver_from_cdn( $src ) {
 
     //Change 'cdn.com' to 'unpkg.com'
-    if ( strpos( $src, 'cdn.com' ) )
+    if ( strpos( $src, 'unpkg.com' ) )
         $src = remove_query_arg( 'ver', $src );
     return $src;
 

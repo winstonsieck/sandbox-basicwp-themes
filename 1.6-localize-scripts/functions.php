@@ -27,8 +27,8 @@ function jsforwp_enqueue_scripts() {
     'jsforwp-theme-js',
     'jsforwp_vars',
     [
-      'site_url' => 'Get site url dynamically here',
-      'site_name'=> 'Get the site name dynamically here'
+      'site_url' => esc_url( home_url() ),
+      'site_name'=> get_bloginfo( 'name' )
     ]
   );
 

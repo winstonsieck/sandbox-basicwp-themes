@@ -13,8 +13,8 @@ function jsforwp_enqueue_scripts() {
   // Change 'unique-handle-here' to 'jsforwp-config-js'
   // Change '/path/to/file.js' to '/assets/js/config.js'
    wp_enqueue_script(
-     'unique-handle-here',
-     get_stylesheet_directory_uri() . '/path/to/file.js',
+     'jsforwp-config-js',
+     get_stylesheet_directory_uri() . '/assets/js/config.js',
      [],
      time(),
      true
@@ -24,7 +24,7 @@ function jsforwp_enqueue_scripts() {
     wp_enqueue_script(
       'jsforwp-theme-js',
       get_stylesheet_directory_uri() . '/assets/js/theme.js',
-      [ 'dependency-handle-here' ],
+      [ 'jsforwp-config-js' ],
       time(),
       true
     );

@@ -13,7 +13,7 @@ function jsforwp_enqueue_scripts() {
   // Change '/path/to/file.js' to '/assets/js/theme.js'
    wp_enqueue_script(
      'jsforwp-theme-js',
-     get_stylesheet_directory_uri() . '/path/to/file.js',
+     get_stylesheet_directory_uri() . '/assets/js/theme.js',
      [],
      time(),
      true

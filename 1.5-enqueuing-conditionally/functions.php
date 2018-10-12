@@ -13,7 +13,7 @@ function jsforwp_enqueue_scripts() {
   // Explore the WP Conditional Tags Here https://goo.gl/mxQt7s
   // Add a conditional tag to the if statement below
   // Practice using different conditional tags
-  if(  ) {
+  if( is_page( 'sample-page' ) ) {
       wp_enqueue_script( 'jsforwp-theme-js', get_stylesheet_directory_uri() . '/assets/js/theme.js', [], time(), true );
   }
 
